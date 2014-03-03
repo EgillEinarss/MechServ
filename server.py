@@ -23,14 +23,13 @@ conn, addr = s.accept()
 print 'Connected by', addr
 while 1:
     cmd = raw_input()
+    conn.send(cmd)
     if cmd == 'x'
-        conn.send(cmd)
         heat = conn.recv(1024)
         light = conn.recv(1024)
         makeHtml(heat,light)
     elif cmd == 'w' or cmd == 's':
-        conn.send(cmd)
-        print conn.recv(1024)
+        print 'Speed is ', conn.recv(1024)
     elif cmd == 'q':
         conn.close()
         break
