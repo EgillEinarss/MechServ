@@ -21,13 +21,17 @@ s.bind((HOST, PORT))
 s.listen(1)
 conn, addr = s.accept()
 print 'Connected by', addr
-#while 1:
-#    data = conn.recv(1024)
-#    if not data: break
-#    print data
-#    conn.send(data)
-heat = conn.recv(1024)
-light = conn.recv(1024)
-conn.send("25")
-makeHtml(heat,light)
-conn.close()
+while 1:
+    cmd = raw_input()
+    if cmd == 'x'
+        conn.send(cmd)
+        heat = conn.recv(1024)
+        light = conn.recv(1024)
+        makeHtml(heat,light)
+    elif cmd == 'w' or cmd == 's':
+        conn.send(cmd)
+        print conn.recv(1024)
+    elif cmd == 'q':
+        conn.close()
+        break
+
