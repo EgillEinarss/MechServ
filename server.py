@@ -3,7 +3,7 @@
 # Echo server program
 import socket
 
-def html(h,l):
+def makeHtml(h,l):
     f = open('placeholder.home.html','w')
     f.write(u'<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>Gangleri</title></head><body>')
     f.write(u"The tempature is " + str(h) +u" degrees C<br />The lights are ")
@@ -29,4 +29,5 @@ print 'Connected by', addr
 heat = conn.recv(1024)
 light = conn.recv(1024)
 conn.send("25")
+makeHtml(heat,light)
 conn.close()
