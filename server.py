@@ -5,13 +5,13 @@ import socket
 
 def html(h,l):
     f = open('placeholder.home.html','w')
-    f.write('<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>Gangleri</title></head><body>')
-    f.write("The tempature is " + str(h) +"°<br />The lights are ")
+    f.write(u'<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>Gangleri</title></head><body>')
+    f.write(u"The tempature is " + str(h) +u"°<br />The lights are ")
     if l == 1:
-        f.write("on.")
+        f.write(u"on.")
     else:
-        f.write("off.")
-    f.write("</body></html>")
+        f.write(u"off.")
+    f.write(u"</body></html>")
     f.close()
 
 HOST = ''                 # Symbolic name meaning the local host
