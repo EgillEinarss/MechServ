@@ -4,10 +4,10 @@
 import socket
 
 def makeHtml(h,l):
-    f = open('placeholder.home.html','w')
+    f = open('../templates/pages/placeholder.home.html','w')
     f.write(u'<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><title>Gangleri</title></head><body>')
     f.write(u"The tempature is " + str(h) +u" degrees C<br />The lights are ")
-    if l == 1:
+    if l == '1':
         f.write(u"on.")
     else:
         f.write(u"off.")
