@@ -24,7 +24,7 @@ print 'Connected by', addr
 while 1:
     cmd = raw_input()
     conn.send(cmd)
-    if cmd == 'x'
+    if cmd == 'x':
         heat = conn.recv(1024)
         light = conn.recv(1024)
         makeHtml(heat,light)
