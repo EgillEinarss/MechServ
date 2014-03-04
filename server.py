@@ -4,7 +4,7 @@
 import socket
 
 def makeHtml(h,l):
-    hiti = str((float(h)*5.0/1024.0 - 0.5)*0.01)
+    hiti = str((float(h)*5.0/1024.0 - 0.5)*5.0)
     if int(l) < 200:
         ljos = u"off."
     else:
