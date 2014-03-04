@@ -1,6 +1,6 @@
 #!/usr/bin/python2.7
 
-# Echo server program
+# Server program
 import socket
 
 def makeHtml(h,l):
